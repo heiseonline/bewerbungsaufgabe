@@ -1,0 +1,17 @@
+{
+  "name": "@heise/news-app",
+  "private": true,
+  "scripts": {
+    "clean:dist": "pnpm run --parallel clean:dist",
+    "lint": "eslint --cache libs services",
+    "build:libs": "pnpm run --sort --if-present build --stream --filter {libs}",
+    "start:dev": "pnpm run --parallel --if-present --stream start:dev",
+    "prebuild": "pnpm run build:libs",
+    "build": "pnpm run --parallel build --filter {services}...",
+    "start": "pnpm run --parallel --if-present start"
+  },
+  "devDependencies": {
+    "@heise/eslint-config": "^19.0.2",
+    "typescript": "^4.3.2"
+  }
+}
