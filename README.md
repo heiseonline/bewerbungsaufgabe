@@ -1,4 +1,4 @@
-# Bewerbungsaufgabe
+# Bewerbungsaufgabe - DevOps for Developers
 
 Wir haben einen Webservice eingerichtet, der die letzten fünf Meldungen von heise online im JSON-Format ausgibt. Dieser Service funktioniert nicht zuverlässig und steht beispielhaft für eine Ressource, die Sie nicht direkt verändern können.
 
