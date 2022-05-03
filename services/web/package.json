@@ -6,12 +6,13 @@
   "scripts": {
     "clean:dist": "rimraf dist",
     "build": "tsc",
-    "start": "LC_ALL=de_DE.UTF-8 node .",
-    "start:dev": "LC_ALL=de_DE.UTF-8 nodemon src/main.ts"
+    "start": "cross-env LC_ALL=de_DE.UTF-8 node .",
+    "start:dev": "cross-env LC_ALL=de_DE.UTF-8 nodemon src/main.ts"
   },
   "dependencies": {
     "@heise/frontend": "workspace:^1.0.0",
     "axios": "^0.21.4",
+    "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
     "express": "^4.18.1",
     "express-tsx-views": "^1.4.7",

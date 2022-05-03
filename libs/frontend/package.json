@@ -6,10 +6,13 @@
   "scripts": {
     "clean:dist": "rimraf dist",
     "start:dev": "tailwindcss-cli build -o dist/styles.css -w",
-    "build": "NODE_ENV=production tailwindcss-cli build -o dist/styles.css -m"
+    "build": "cross-env NODE_ENV=production tailwindcss-cli build -o dist/styles.css -m"
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
     "tailwindcss-cli": "^0.1.2"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
   }
 }
