@@ -4,14 +4,17 @@
   "scripts": {
     "clean:dist": "pnpm run --parallel clean:dist",
     "lint": "eslint --cache libs services",
-    "build:libs": "pnpm run --sort --if-present build --stream --filter {libs}",
+    "build:libs": "pnpm -r --sort --if-present --stream --filter {libs/**} run build",
     "start:dev": "pnpm run --parallel --if-present --stream start:dev",
     "prebuild": "pnpm run build:libs",
-    "build": "pnpm run --parallel build --filter {services}...",
+    "build": "pnpm -r --parallel --filter {services/**}... run build",
     "start": "pnpm run --parallel --if-present start"
   },
+  "engines": {
+    "pnpm": "^7"
+  },
   "devDependencies": {
-    "@heise/eslint-config": "^19.0.2",
-    "typescript": "^4.3.2"
+    "@heise/eslint-config": "^19.0.13",
+    "typescript": "^4.6.4"
   }
 }
